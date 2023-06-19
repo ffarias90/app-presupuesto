@@ -21,14 +21,19 @@
       <div class="top">
         <!-- formulario verde -->
         <div class="green">
-          <form>
+          <form onsubmit="enviarFormulario(event)">
             <div class="mb-3">
               <label for="presupuesto" class="form-label"
                 >Ingresa tu Presupuesto</label
               >
-              <input type="number" class="form-control" id="presupuesto" />
+              <input
+                type="number"
+                type="submit"
+                class="form-control"
+                id="presupuesto"
+              />
             </div>
-            <button type="submit" class="btn btn-outline-success">
+            <button id="btnCalcular" class="btn btn-outline-success">
               Calcular
             </button>
           </form>
@@ -45,17 +50,18 @@
             </thead>
             <tbody>
               <tr>
-                <td>$0</td>
-                <td>$0</td>
-                <td>$0</td>
+                <td id="nuevoPresupuesto">$0</td>
+                <td id="suma">$0</td>
+                <td id="resta">$0</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
 
-      <!-- right -->
+      <!-- bottom -->
       <div class="bottom">
+        <!-- tabla de nombre y cantidad de gastos -->
         <div class="red">
           <form>
             <div class="mb-3">
@@ -65,22 +71,28 @@
               <input type="text" class="form-control" id="nombreGasto" />
             </div>
             <div class="mb-3">
-              <label for="presupuesto" class="form-label"
+              <label for="gasto" id="gasto" class="form-label"
                 >Ingresa Cantidad del Gasto</label
               >
               <input type="number" class="form-control" id="cantidadGasto" />
             </div>
-            <button type="submit" class="btn btn-outline-danger">
+            <button
+              type="button"
+              class="btn btn-outline-danger"
+              onclick="agregarGasto()"
+            >
               Añadir Gasto
             </button>
           </form>
         </div>
+        <!-- listado de gastos y valores -->
         <div class="listado">
-          <table class="table">
+          <table id="table" class="table">
             <thead>
               <tr>
                 <th scope="col">Gasto</th>
                 <th scope="col">Valor</th>
+                <th scope="col">Acción</th>
               </tr>
             </thead>
             <tbody class="table-group-divider">
@@ -96,5 +108,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="/assets/js/scripts.js"></script>
   </body>
 </html>
