@@ -1,0 +1,52 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* TOP*/
+.top {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.green {
+    background-color: rgb(235, 255, 235);
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid rgb(57, 155, 56);
+    width: 38%;
+}
+
+.presupuesto {
+    width: 40%;
+}
+
+
+/* BOTTOM */
+
+.bottom {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.red {
+    background-color: rgb(255, 214, 214);
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid rgb(152, 7, 6);
+    margin-top: 30px;
+    width: 38%;
+}
+
+.listado {
+    width: 40%;
+    padding: 10px;
+}
